@@ -1,0 +1,1 @@
+(idea: separate presentation into a folder structure, hide the word 'platypus' or 'platypuses' or 'platypi', then use that to demo find in project / ackmate.)
