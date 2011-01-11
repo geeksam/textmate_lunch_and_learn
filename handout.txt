@@ -1,11 +1,3 @@
-Those of us on the spaceship spend an incredible amount of time pressing buttons to move little chunks of text around. (See also:  http://xkcd.com/722/)  We've learned lots of little shortcuts for making that process suck less.  Some of them are incredibly useful, and might make your work just that little bit easier.  (Need to add a column of sequential numbers starting with 26 and ending at 43 to the end of some set of filenames?  I've written a macro for that.)
-
-I'm thinking I'll distribute handouts, then go through them REALLY FAST.  The idea won't be that you learn how to do more than one or two things; rather, I want to give you an idea of what a good text editor can do, so the next time you're faced with a tedious task, you'll remember that there's a better way, and either look it up or come ask.
-
-(idea: separate presentation into a folder structure, hide the word 'platypus' or 'platypuses' or 'platypi', then use that to demo find in project / ackmate.)
-
---
-
 Getting Around
 - Opening a single file
 - Opening a folder or project
@@ -112,4 +104,3 @@ Commands
     - In column mode!
   - Note that this is how the command to align '=' characters is implemented.
     - there's a Haskell implementation that was used as a demonstration for 'tying the knot'
-
