@@ -1,0 +1,11 @@
+h1. TextMate for Fun and Profit
+
+h2. Lunch and Learn presentation (for my coworkers at Renewable Funding)
+
+h3. Rationale
+
+Those of us on the spaceship spend an incredible amount of time pressing buttons to move little chunks of text around. (See also: "xkcd":http://xkcd.com/722/.)  We've learned lots of little shortcuts for making that process suck less.  Some of them are incredibly useful, and might make your work just that little bit easier.  Some of them are downright frivolous.  (Need to add a column of sequential numbers starting with 26 and ending at 43 to the end of some set of filenames?  I've written a macro for that.  I'll let you decide which category it's in.)
+
+h3. Format
+
+I'll distribute handouts, then go through them REALLY FAST.  The idea is that maybe you learn how to do one or two things; more importantly, I want to give you an idea of what a good text editor can do, so the next time you're faced with a tedious task, you'll remember that there's a better way, and either look it up or come ask.
