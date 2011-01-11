@@ -1,0 +1,115 @@
+Those of us on the spaceship spend an incredible amount of time pressing buttons to move little chunks of text around. (See also:  http://xkcd.com/722/)  We've learned lots of little shortcuts for making that process suck less.  Some of them are incredibly useful, and might make your work just that little bit easier.  (Need to add a column of sequential numbers starting with 26 and ending at 43 to the end of some set of filenames?  I've written a macro for that.)
+
+I'm thinking I'll distribute handouts, then go through them REALLY FAST.  The idea won't be that you learn how to do more than one or two things; rather, I want to give you an idea of what a good text editor can do, so the next time you're faced with a tedious task, you'll remember that there's a better way, and either look it up or come ask.
+
+(idea: separate presentation into a folder structure, hide the word 'platypus' or 'platypuses' or 'platypi', then use that to demo find in project / ackmate.)
+
+--
+
+Getting Around
+- Opening a single file
+- Opening a folder or project
+- Opening files within a project
+  - project drawer
+  - Cmd+T
+- Moving around in a file
+  - jump by word
+  - beginning of line ( Cmd+Left and Ctrl+A )
+  - EOL
+  - top/bottom
+  - jump to line
+  - symbol selector (bottom right of window)
+- Setting and using bookmarks
+
+Syntax Highlighting
+- e.g., Textile support
+  - note that you may have to add entries under Preferences / Fonts & Colors (markup.bold.textile, markup.italic.textile) to actually highlight Textile syntax
+- Note that TextMate's approach allows grammars to embed each other, which is useful for, e.g., ERB
+  - But creating a new grammar is freakin' hard, so I mostly leave them alone
+
+Text Folding
+- manual
+- based on language grammar
+
+Selecting text
+- Mouse (duh)
+- Shift+cursor movement
+- Select current line ( Cmd+Shift+L )
+- Column mode ( Opt+mouse; select text, then tap Opt )
+- "Reverse" column mode (menu calls this "Edit Each Line in Selection") ( Cmd+Opt+A )
+
+Finding Text
+- Find in file
+- Count occurrences in file (sigma button)
+- Find in all files (MIGHT BE VERY SLOW)
+- AckMate (disgustingly fast, no replace)
+- Cmd+F (note expanded form for long text, which I never use)
+- Cmd+G ()
+
+Replacing Text, Basic
+- pretty much what it sounds like
+
+FYI
+- line/column info at bottom left
+- show/hide line numbers, fold indicators, bookmarks
+- show/hide drawer ( Ctrl+Opt+Cmd+D )
+- reveal current file  ( Ctrl+Cmd+R )
+
+Whitespace
+- Show/hide invisibles ( Cmd+Opt+I )
+- Soft vs. hard tabs
+- Convert tabs to spaces (or vice versa)
+- Manual indent/deindent
+- Auto-indent based on grammar
+- Align '=' symbols ( Cmd+Opt+] )
+
+Manipulating Text
+- Switch case (variety of options)
+- Align left/right/center/full justified (not terribly useful for plain text, but neat)
+- Reformat line breaks ( Ctrl+Q )
+- Quote ( Cmd+' )
+- Move selection ( Ctrl+Cmd+arrows )
+- Transpose (chars, lines) ( Ctrl+T )
+- Delete to end of line ( Ctrl+K )
+- Delete line ( Ctrl+Shift+K )
+- Wrap selection in paired characters, e.g., (), [], {}, ""
+- Sort lines in selection
+
+Entering Text
+- Type, copy/paste (booooring)
+- Duplicate current line ( Ctrl+Shift+D )
+- Snippets (simple) (ex: 'lorem')
+  - note that snippets don't have to make things longer!  ex: should <--> should_eventually
+- Snippets (with tab stops, default values) (ex: 'h1' in the Textile bundle)
+
+Manipulating Code
+- Change surrounding markers
+  - Change quoting style ( Ctrl+" in the Source bundle )
+  - Change string to symbol
+  - Change ERB tag style ( Ctrl+> )
+  - Change {} to do..end ( Ctrl+{ in the Ruby bundle )
+- Working with HTML
+  - Start a new tag ( Ctrl+< )
+  - Wrap selection in a tag ( Ctrl+Shift+W )
+
+
+----- STUPID EDITOR TRICKS -----
+
+Finding/Replacing Text, Advanced
+- Regex find!
+- Regex captures in replace!
+(DEMO: take predictably formatted text and turn it into a TSV)
+
+Math?  In a text editor?
+- Ctrl+Shift+C brings up _C_alculation commands
+  - Basic math evaluation
+  - hex/octal/decimal conversions
+  - Awesome feature:  send line to google calculator
+
+Commands
+- Run selected text (or line, or entire file) through an arbitrary script of your choice
+  - Insert a column of sequential numbers!  ( Cmd+Opt+# in my bundle )
+    - In column mode!
+  - Note that this is how the command to align '=' characters is implemented.
+    - there's a Haskell implementation that was used as a demonstration for 'tying the knot'
+
