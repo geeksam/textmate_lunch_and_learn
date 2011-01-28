@@ -1,17 +1,23 @@
 Getting Around
 - Opening a single file
 - Opening a folder or project
+- Opening stuff from the command line
+  - CLI ninjutsu:  ack -il --text 'platyp(i|us)' | xargs mate
 - Opening files within a project
   - project drawer
+    - ProjectPlus plugin (note quirky behavior in first-opened window)
   - Cmd+T
-- Moving around in a file
-  - jump by word
+- Moving around on the current line
+  - jump by word ( Opt+Left, Opt+Right )
   - beginning of line ( Cmd+Left and Ctrl+A )
-  - EOL
-  - top/bottom
-  - jump to line
+  - end of line ( Cmd+Right and Ctrl+E )
+- Moving around in a file
+  - jump by paragraph/indentation ( Opt+Up, Opt+Down )
+  - top/bottom ( Cmd+Up, Cmd+Down )
+  - jump to line ( Cmd+L )
   - symbol selector (bottom right of window)
-- Setting and using bookmarks
+    - Cmd+Opt+T
+- Setting and using bookmarks ( Cmd+F2, F2 )
 
 Syntax Highlighting
 - e.g., Textile support
@@ -19,32 +25,35 @@ Syntax Highlighting
 - Note that TextMate's approach allows grammars to embed each other, which is useful for, e.g., ERB
   - But creating a new grammar is freakin' hard, so I mostly leave them alone
 
-Text Folding
-- manual
-- based on language grammar
-
 Selecting text
 - Mouse (duh)
-- Shift+cursor movement
+- Shift+arrow keys (plus Opt or Cmd)
 - Select current line ( Cmd+Shift+L )
 - Column mode ( Opt+mouse; select text, then tap Opt )
 - "Reverse" column mode (menu calls this "Edit Each Line in Selection") ( Cmd+Opt+A )
 
+Text Folding
+- manual (select text, F1)
+- based on language grammar
+
 Finding Text
 - Find in file
+  - note checkboxes in dialog
 - Count occurrences in file (sigma button)
-- Find in all files (MIGHT BE VERY SLOW)
-- AckMate (disgustingly fast, no replace)
+- Find in all files, native (MIGHT BE VERY SLOW)
+- AckMate plugin (disgustingly fast, no replace)
 - Cmd+F (note expanded form for long text, which I never use)
-- Cmd+G ()
+- Cmd+G (find aGain)
+- Cmd+E (use selection for find) followed by Cmd+G
 
 Replacing Text, Basic
-- pretty much what it sounds like
+- pretty much what it sounds like; use the Find window and
+- incremental search ( Ctrl+S forward, Ctrl+Shift+S backward, doesn't appear all that useful )
 
 FYI
 - line/column info at bottom left
 - show/hide line numbers, fold indicators, bookmarks
-- show/hide drawer ( Ctrl+Opt+Cmd+D )
+- show/hide drawer and status display ( Ctrl+Opt+Cmd+D )
 - reveal current file  ( Ctrl+Cmd+R )
 
 Whitespace
