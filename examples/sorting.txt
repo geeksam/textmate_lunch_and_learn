@@ -1,0 +1,64 @@
+Here's a list of Peepcode screencasts and PDFs, which contains some duplicates:
+
+Use the Cucumber
+RSpec Basics
+RSpec Controllers & Tools
+RSpec Mocks & Models
+Meet Sinatra
+Ruby 1.9 Part I
+Ruby 1.9 Part II
+Scaling Ruby
+Capistrano 2
+Phusion Passenger
+Benchmarking with httperf
+Objective-C for Rubyists
+iPhone View Controllers I
+iPhone View Controllers II
+iPhone Views I
+MacRuby
+Programmer Productivity
+Control Your Email Inbox
+Gary Bernhardt
+John Barnette
+Meet jQuery
+Meet Node.js
+jQuery Ajax
+Meet jQTouch
+Meet Raphael.js
+Javascript with Prototype.js
+Ajax with Prototype.js
+Unobtrusive Prototype.js
+CouchDB for Rails
+Thinking Sphinx PDF
+ActiveMerchant PDF
+Git Source Code Control
+Git Internals PDF
+Smash Into Vim I
+Smash Into Vim II
+Meet the Command Line
+Advanced Command Line
+Meet Emacs
+Meet Mercurial
+Functional Programming with Clojure
+Rails 3 Handbook PDF
+Meet Rails 3
+Meet Rails 3 ii
+Advanced ActiveRecord
+Haml & Sass
+REST for Rails 2
+TextMate for Rails 2
+XMPP/Jabber with Ruby
+Rails Code Review PDF
+Rails 2 Plugins PDF
+Receiving Email with Ruby
+Rails Security Audit PDF
+Page, Action & Fragment Caching
+Test-First Development
+Meet Rails 3
+Meet Node.js
+Meet jQuery
+Play by Play Series
+Smash Into Vim I
+PeepOpen Application
+Git Source Code Control
+Git Internals PDF

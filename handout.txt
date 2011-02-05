@@ -1,17 +1,29 @@
 Getting Around
 - Opening a single file
 - Opening a folder or project
-- Opening stuff from the command line
-  - CLI ninjutsu:  ack -il --text 'platyp(i|us)' | xargs mate
+- Opening a folder from the Finder
+  - Launch Automator, choose "Service" from the menu
+  - Add "Open Finder items" action, select TextMate
+  - Save as "Open in TextMate"
+  - Right-click on any Finder folder, pick Services -> Open in TextMate
+- Command-line fu
+- Opening a folder from the command line
+  - "mate .", which I have aliased to "e."
+  - if that doesn't work:
+    - Help -> Terminal Usage...
+    - pick somewhere on your path
+    - click "Create link"
 - Opening files within a project
   - project drawer
-    - ProjectPlus plugin (note quirky behavior in first-opened window)
-  - Cmd+T
-    - examples: 'g', 'a', 'al'
+    - ProjectPlus plugin
+      - note that this doesn't work on the first-opened TextMate window
+      - http://ciaranwal.sh/projectplus
+  - Open file by typing characters in its name ( Cmd+T )
+    - examples in this project: 'g', 'a', 'al'
 - Moving around on the current line
   - jump by word ( Opt+Left, Opt+Right )
-  - beginning of line ( Cmd+Left and Ctrl+A )
-  - end of line ( Cmd+Right and Ctrl+E )
+  - beginning of line ( Cmd+Left, Ctrl+A )
+  - end of line ( Cmd+Right, Ctrl+E )
 - Moving around in a file
   - jump by paragraph/indentation ( Opt+Up, Opt+Down )
   - top/bottom ( Cmd+Up, Cmd+Down )
@@ -23,7 +35,7 @@ Getting Around
 
 Syntax Highlighting
 - e.g., Textile support
-  > see README.textile
+  > README.textile
   - note that you may have to add entries under Preferences / Fonts & Colors (markup.bold.textile, markup.italic.textile) to actually highlight Textile syntax
 - TextMate's approach allows grammars to embed each other, which is useful for, e.g., ERB
   - But working with grammars is mind-bendingly hard, so I mostly leave them alone
@@ -39,6 +51,8 @@ Text Folding
 - manual (select text, F1)
 - based on language grammar
   > see my_cool_script.rb
+- Fold/unfold everything at a given level ( Cmd+Opt+0, Cmd+Opt+1, Cmd+Opt+2, ... )
+  > see avs_capable_bogus_gateway.rb
 
 Finding Text in the Current File
 - Find ( Cmd+F )
@@ -52,17 +66,18 @@ Finding Text in the Current File
 
 Finding Text in the Current Project
 - Find in all files, native ( Cmd+Shift+F)
-  - MIGHT BE OMFG SLOW
+  - Might be OMFG SLOW
 - AckMate plugin
   - Disgustingly fast (and doesn't block the whole app!), but has no replace feature
   - only search in specified filetypes
   - scope to current folder (hold down Command when searching)
+  - https://github.com/protocool/AckMate
 
-FYI (aka Fugawi?)
+FYI
 - line/column info at bottom left
 - show/hide line numbers, fold indicators, bookmarks
 - show/hide drawer and status display ( Ctrl+Opt+Cmd+D )
-- reveal current file  ( Ctrl+Cmd+R )
+- reveal current file ( Ctrl+Cmd+R )
 
 Whitespace
 > see whitespace.rb
@@ -80,38 +95,60 @@ Manipulating Text
   - Lower ( Ctrl+Shift+U )
   - Title Case ( Ctrl+Option+U )
   - Opposite Case ( Ctrl+G )
-- Align left/right/center/full justified (not terribly useful for plain text, but neat)
+- Align left/right/center/full justified (menu only; not terribly useful for plain text, but cute)
 - Reformat line breaks ( Ctrl+Q )
-- Quote ( Cmd+' )
+- Quote/Unquote ( Cmd+', Cmd+Opt+' )
 - Move selection ( Ctrl+Cmd+arrows )
-- Transpose (chars, lines) ( Ctrl+T )
+- Transpose characters ( Ctrl+T )
+  - different behavior at the beginning of a line
 - Delete to end of line ( Ctrl+K )
 - Delete line ( Ctrl+Shift+K )
 - Wrap selection in paired characters, e.g., (), [], {}, ""
 - Sort lines in selection ( F5 )
+  > sorting.txt
   - Note that this introduces bundle item overloading: you can assign more than one item to a keystroke, and if it's ambiguous, TextMate will ask you what you mean when you use it.
 
 Entering Text
 - Type, copy/paste (booooring)
 - Duplicate current line ( Ctrl+Shift+D )
-- Snippets (simple) (ex: 'lorem')
-  - note that snippets don't have to make things longer!  ex: should <--> should_eventually
-- Snippets (with tab stops, default values) (ex: 'h1' in the Textile bundle)
+- Snippets (simple)
+  - with tab triggers (ex: 'lorem')
+    - note that these don't have to "expand" text!  ex: should <--> should_eventually
+  - with keyboard triggers (ex: Ctrl+P for params[:id])
+  - Snippets (with tab stops, default values) (ex: 'h1' in the Textile bundle)
+    - if tab doesn't expand a snippet, you're probably still "inside" a previous snippet.
+- Macros
+  - may also have tab triggers
+    > rails_migration.rb, mcol (I actually haven't looked at how these work, but they're pretty cool)
 
 Multi-line Editing
 - Column editing ( Opt+mouse; select text, then tap Opt.  Then type. )
 - "Reverse" column mode (menu calls this "Edit Each Line in Selection") ( select lines, Cmd+Opt+A, type )
 
-Manipulating Code
+Working with HTML
+  - Start a new tag ( Ctrl+< )
+  - Wrap selection in a tag ( Ctrl+Shift+W )
+
+Working with Ruby
 - Change surrounding markers
   - Change quoting style ( Ctrl+" in the Source bundle )
   - Change string to symbol
   - Change ERB tag style ( Ctrl+> )
-  - Change {} to do..end ( Ctrl+{ in the Ruby bundle )
-- Working with HTML
-  - Start a new tag ( Ctrl+< )
-  - Wrap selection in a tag ( Ctrl+Shift+W )
-
+  - Change {} to do..end ( Ctrl+{ )
+- Ruby/Rails snippets
+  - attribute readers, writers, both:  r, w, rw
+  - control statements: if, ife, case
+  - Hashrocket with spaces: " => " ( Ctrl+L )
+  - :key => 'value'
+    - Note that I've changed the default behavior of this snippet, because I got tired of backspacing over the comma
+  - def to define a method; defs to define a "self." method
+  - defmm to define method missing
+  - do to start a do..end block -- and note behavior around block params!
+  - Enumerable goodness!  ea, eawi, map, col, inj, par... pattern here is "first few letters"
+  - Block thingies!  tap, inj, 
+  - mod to define a module -- note that option #3 gives you boilerplate for a namespaced mixin
+  - Assert helpers!  ase, asne, asn, asr
+  - ...and much, much more.  Poke through the Bundles menu and see what catches your eye.
 
 ----- STUPID EDITOR TRICKS -----
 
@@ -125,14 +162,18 @@ Replacing Text, Advanced
 - Regex captures in replace!
 (DEMO: take predictably formatted text and turn it into a TSV)
 
+Command-Line Silliness
+- Advanced maneuver:  ack -il --text 'platyp(i|us)' | xargs mate
+
 Math?  In a text editor?
 - Ctrl+Shift+C brings up _C_alculation commands
   - Basic math evaluation
   - hex/octal/decimal conversions
-  - Awesome feature:  send line to google calculator
+  - Send line to Google Calculator(!)
+    speed of light in cubits per fortnight
 
 Git Integration
-- Git blame (I use this so often I moved it to the top in the bundle menu)
+- Git blame (I use this so often I moved it to slot #2 in the bundle menu)
 - Show uncommitted changes
 - Compare revisions
 - ...and more!  (I use the command line for making actual changes, though)
@@ -142,4 +183,4 @@ Commands
   - Insert a column of sequential numbers!  ( Cmd+Opt+# in my bundle )
     - In column mode!
   - Note that this is how the command to align '=' characters is implemented.
-    - there's a Haskell implementation that was used as a demonstration for 'tying the knot'
+    - Mark Jones wrote a Haskell version and used it as a demonstration for 'tying the knot', but I don't seem to have a copy now.
