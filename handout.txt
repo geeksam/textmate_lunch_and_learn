@@ -1,15 +1,14 @@
 Getting Around
 - Opening a single file
 - Opening a folder or project
-- Opening a folder from the Finder
+- Opening a folder or file from the Finder using a custom Service
   - Launch Automator, choose "Service" from the menu
   - Add "Open Finder items" action, select TextMate
   - Save as "Open in TextMate"
   - Right-click on any Finder folder, pick Services -> Open in TextMate
-- Command-line fu
 - Opening a folder from the command line
   - "mate .", which I have aliased to "e."
-  - if that doesn't work:
+  - to enable this:
     - Help -> Terminal Usage...
     - pick somewhere on your path
     - click "Create link"
@@ -65,9 +64,9 @@ Finding Text in the Current File
 - Use selection for find ( Cmd+E, then Cmd+G )
 
 Finding Text in the Current Project
-- Find in all files, native ( Cmd+Shift+F)
+- Find in all files, native ( Cmd+Shift+F )
   - Might be OMFG SLOW
-- AckMate plugin
+- AckMate plugin ( Cmd+Opt+Ctrl+F )
   - Disgustingly fast (and doesn't block the whole app!), but has no replace feature
   - only search in specified filetypes
   - scope to current folder (hold down Command when searching)
